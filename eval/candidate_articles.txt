@@ -1,0 +1,59 @@
+# テストクエリ候補記事 20件
+# サブトピックが偏らないように選出
+# ここから各記事を読んで検索クエリを考える
+
+## チャンキング（3件）
+  3. 15fb1ef34ccb26d8aa9d  RAG の精度は「チャンク設計」で決まる — Markdown見出し + セマンティックチャンキングで精度を上げる【第4弾】
+     https://qiita.com/bit-tanghao/items/15fb1ef34ccb26d8aa9d
+ 75. 6bf99caf3c44f4bf0053  RAGを本番で破綻させないためのチャンキング設計とデータ品質管理チップス
+     https://qiita.com/76Hata/items/6bf99caf3c44f4bf0053
+ 78. ac9556f44725c3c4fffc  チャンキングしてからベクトル化するか、ベクトル化してからチャンキングするか ー Perplexity の遅延チャンキング
+     https://qiita.com/yuji-arakawa/items/ac9556f44725c3c4fffc
+
+## ハイブリッド検索 / スコア統合（3件）
+  4. 8888c6241793369a0fb7  RAG の検索精度を「検索器の強化」で上げる — ChromaDB + BM25 + RRF で作る Hybrid RAG【第3弾】
+     https://qiita.com/bit-tanghao/items/8888c6241793369a0fb7
+ 63. c673970229f00b12e2ed  BM25+MeCabで介護専門用語を確実にヒットさせる — RAGハイブリッド検索の実装
+     https://qiita.com/yamashita_aidev/items/c673970229f00b12e2ed
+ 65. 503cd0333b331750727c  RRFのk=60は最適とは限らない
+     https://qiita.com/kato191313/items/503cd0333b331750727c
+
+## Agentic RAG / エージェント（3件）
+  6. 03ac7d46eb166974ed96  「検索が足りない」を自分で判断させる — LangGraph + ChromaDB で作る Agentic RAG【第2弾】
+     https://qiita.com/bit-tanghao/items/03ac7d46eb166974ed96
+ 80. 28843a920882da996c13  「RAGかエージェントか」で悩まない——安い検索から重い探索へ、段階的に乗せる設計が正解な理由
+     https://qiita.com/mhamadajp/items/28843a920882da996c13
+ 94. 6fff64c275dc27a4f92b  Claude Code が RAG を捨てた理由 -「Agentic Search」という選択肢
+     https://qiita.com/Dinn/items/6fff64c275dc27a4f92b
+
+## 評価（2件）
+ 18. e2e0c11cc2abc02783b1  RAGの検索精度を3軸で測ったら最適解が条件で全く変わった
+     https://qiita.com/plasmon/items/e2e0c11cc2abc02783b1
+ 97. bdff96c2bdfc271dcf8f  RAGの評価方法の実装&比較~失敗談を添えて~【RAGAS】【LLM-as-a-judge】
+     https://qiita.com/Sh-kawai/items/bdff96c2bdfc271dcf8f
+
+## ローカルLLM / RAG（3件）
+ 58. 02c7494d5e15822cba43  RTX 4060 8GBで論文RAGを完全ローカル化した — BGE-M3 + Qwen2.5-32B + ChromaDB構築記
+     https://qiita.com/plasmon/items/02c7494d5e15822cba43
+ 70. 3b13ef972eacf84d0f72  Ollama + RAGで社内文書Q&Aボットを構築した — 埋め込みモデル3種比較と「答えない」設計
+     https://qiita.com/katz_ai/items/3b13ef972eacf84d0f72
+ 92. 4e3dbe6ff94a07d2b1f1  GPUなしで作るローカルRAG入門（LM Studio + LangChain + Chroma）
+     https://qiita.com/valpasucucci43/items/4e3dbe6ff94a07d2b1f1
+
+## Embedding / ベクトルDB（2件）
+  1. 69143e24a8f85d5bca9d  LLMの2大カテゴリ：質疑応答モデルとEmbeddingモデルの違い
+     https://qiita.com/Katzertes/items/69143e24a8f85d5bca9d
+ 36. 4e4aa1e7825ddd728152  ベクトルDB 完全比較：RAG基盤の技術選定ガイド（11製品）
+     https://qiita.com/Tadashi_Kudo/items/4e4aa1e7825ddd728152
+
+## GraphRAG / ナレッジグラフ（2件）
+ 50. 9eedb6b88eb84042e699  ナレッジグラフ×LLM実践入門 ── RAGの次のアーキテクチャを理解する
+     https://qiita.com/nogataka/items/9eedb6b88eb84042e699
+ 62. db2ab49976244b8f0c37  GraphRAGを実際にOSSで構築してGitHubに公開した — Claude Code × Neo4j で「個人ナレッジグラフ」
+     https://qiita.com/okikusan-public/items/db2ab49976244b8f0c37
+
+## 基礎 / 入門（2件）
+  7. bdc53df058e9d4ab4681  RAGを実装してわかった「1回の検索」という限界 — ChromaDB + Claude で動かす基本パイプライン【前編】
+     https://qiita.com/bit-tanghao/items/bdc53df058e9d4ab4681
+ 88. 7a625141b6b66b601ebd  【初心者向け】RAGってなに？AIが「嘘をつかなくなる」仕組みをゼロからやさしく解説
+     https://qiita.com/masukane9473/items/7a625141b6b66b601ebd

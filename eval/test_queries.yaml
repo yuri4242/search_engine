@@ -1,0 +1,112 @@
+# テストクエリセット（20件）
+#
+# AI生成後、人間が確認・修正すること。
+# クエリのタイプ: キーワード的 / 言い換え / 質問文 を混在させている。
+
+# --- チャンキング（3件） ---
+- query: "RAG Markdown セマンティックチャンキング"
+  relevant_articles:
+    - "15fb1ef34ccb26d8aa9d"  # 3. チャンク設計で精度が決まる — Markdown見出し + セマンティックチャンキング
+  note: "キーワード的。空行区切りの問題とセマンティック分割の改善が核心"
+
+- query: "デモでは動くのにRAGが本番で動かなくなる原因は？"
+  relevant_articles:
+    - "6bf99caf3c44f4bf0053"  # 75. チャンキング設計とデータ品質管理
+  note: "言い換え。デモでは動くが本番で破綻するパターンの記事"
+
+- query: "Perplexityの遅延チャンキングとは？"
+  relevant_articles:
+    - "ac9556f44725c3c4fffc"  # 78. 遅延チャンキング — Perplexityの手法
+  note: "質問文。遅延チャンキング（先にベクトル化してから分割）の記事"
+
+# --- ハイブリッド検索 / スコア統合（3件） ---
+- query: "BM25 ベクトル検索 RRF ハイブリッドRAG"
+  relevant_articles:
+    - "8888c6241793369a0fb7"  # 4. ChromaDB + BM25 + RRF で作る Hybrid RAG
+  note: "キーワード的。ベクトル検索の弱点をBM25で補う構成"
+
+- query: "専門用語がRAGでヒットしない問題の解決策"
+  relevant_articles:
+    - "c673970229f00b12e2ed"  # 63. BM25+MeCabで介護専門用語をヒットさせる
+  note: "言い換え。褥瘡・誤嚥などの専門用語をBM25で拾う話"
+
+- query: "RRFのパラメータkの適切な値は？"
+  relevant_articles:
+    - "503cd0333b331750727c"  # 65. RRFのk=60は最適とは限らない
+  note: "質問文。k=60は原著のパイロット値で、最適とは限らない"
+
+# --- Agentic RAG / エージェント（3件） ---
+- query: "検索結果が足りないときにクエリを書き換えてRAG自身に再検索させるには？"
+  relevant_articles:
+    - "03ac7d46eb166974ed96"  # 6. LangGraph + ChromaDB で作る Agentic RAG
+  note: "言い換え。LLMが検索結果を評価してループする仕組み"
+
+- query: "RAGとエージェントの違いは？どう使い分けるべき？"
+  relevant_articles:
+    - "28843a920882da996c13"  # 80. 安い検索から重い探索へ段階的に乗せる設計
+  note: "質問文。RAGがエージェントに組み込まれて再編されている話"
+
+- query: "Claude Code Agentic Search"
+  relevant_articles:
+    - "6fff64c275dc27a4f92b"  # 94. Claude CodeがRAGを捨てた理由
+  note: "キーワード的。RAGを試して捨てagentic searchを採用した経緯"
+
+# --- 評価（2件） ---
+- query: "embeddingモデルとチャンクサイズで検索精度がどう変わるか実測"
+  relevant_articles:
+    - "e2e0c11cc2abc02783b1"  # 18. RAGの検索精度を3軸で測った
+  note: "言い換え。E5-small vs BGE-M3、日本語トークナイザの影響の実測"
+
+- query: "RAGAS LLM-as-a-judge RAG評価 比較"
+  relevant_articles:
+    - "bdff96c2bdfc271dcf8f"  # 97. RAGの評価方法の実装&比較
+  note: "キーワード的。RAGASとLLM-as-a-judgeの両方を実装して比較"
+
+# --- ローカルLLM / RAG（3件） ---
+- query: "ローカルRAG 論文検索"
+  relevant_articles:
+    - "02c7494d5e15822cba43"  # 58. RTX 4060 8GBで論文RAGを完全ローカル化
+  note: "キーワード的。VRAM制約の中でBGE-M3+Qwen2.5-32Bを動かす構築記"
+
+- query: "社内文書をクラウドに送らずにAIで質問応答したい"
+  relevant_articles:
+    - "3b13ef972eacf84d0f72"  # 70. Ollama+RAGで社内文書Q&Aボット
+  note: "言い換え。セキュリティ要件でローカル完結する構成"
+
+- query: "GPUなしでRAGを構築する方法"
+  relevant_articles:
+    - "4e3dbe6ff94a07d2b1f1"  # 92. GPUなしで作るローカルRAG入門
+  note: "質問文。CPU環境でLM Studio+LangChain+Chromaを使う入門記事"
+
+# --- Embedding / ベクトルDB（2件） ---
+- query: "質疑応答モデルとEmbeddingモデルは何が違うのか"
+  relevant_articles:
+    - "69143e24a8f85d5bca9d"  # 1. LLMの2大カテゴリの違い
+  note: "質問文。生成モデルとEmbeddingモデルの役割分担の解説"
+
+- query: "ベクトルDB 比較 選定 RAG"
+  relevant_articles:
+    - "4e4aa1e7825ddd728152"  # 36. ベクトルDB完全比較：11製品
+  note: "キーワード的。Oracle/pgvector/Pinecone/Qdrant等11製品の比較"
+
+# --- GraphRAG / ナレッジグラフ（2件） ---
+- query: "RAGにナレッジグラフを組み合わせると何ができるようになる？"
+  relevant_articles:
+    - "9eedb6b88eb84042e699"  # 50. ナレッジグラフ×LLM実践入門
+  note: "言い換え。2ホップ推論の壁をグラフ構造で突破する話"
+
+- query: "GraphRAG 個人ナレッジ 構築"
+  relevant_articles:
+    - "db2ab49976244b8f0c37"  # 62. GraphRAGをOSSで構築してGitHubに公開
+  note: "キーワード的。散らばったノートをグラフで一元管理する実装"
+
+# --- 基礎 / 入門（2件） ---
+- query: "RAGの基本パイプラインと限界"
+  relevant_articles:
+    - "bdc53df058e9d4ab4681"  # 7. RAGを実装してわかった「1回の検索」という限界
+  note: "言い換え。ChromaDB+Claudeの最小構成で成功・失敗の両方を見せる記事"
+
+- query: "RAGとは何か 初心者向け わかりやすく"
+  relevant_articles:
+    - "7a625141b6b66b601ebd"  # 88. RAGってなに？AIが嘘をつかなくなる仕組み
+  note: "キーワード的。ハルシネーション対策としてのRAGをゼロから解説"

@@ -1,0 +1,17 @@
+[project]
+name = "search-engine"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "requests",
+    "sudachipy",
+    "sudachidict-core",
+    "rank-bm25",
+    "lancedb",
+    "sentence-transformers",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
