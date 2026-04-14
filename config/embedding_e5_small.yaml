@@ -1,0 +1,12 @@
+# Embedding モデル設定: multilingual-e5-small
+# Microsoft製の多言語モデル。ruri と同じく prefix が必須
+
+model:
+  name: intfloat/multilingual-e5-small
+  query_prefix: "query: "
+  passage_prefix: "passage: "
+  trust_remote_code: false
+
+lancedb:
+  path: data/lance
+  table_name: chunks_e5_small

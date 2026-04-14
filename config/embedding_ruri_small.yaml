@@ -1,0 +1,17 @@
+# Embedding モデル設定: ruri-small
+# 他のモデルは embedding_ruri_base.yaml などを作る
+
+model:
+  name: cl-nagoya/ruri-small
+  # ruriシリーズは instruction prefix が必須
+  # 検索クエリ側は "query: "、インデックス対象側は "passage: "
+  query_prefix: "query: "
+  passage_prefix: "passage: "
+  # Hugging Faceからロードするとき、カスタムコードを信頼するか（ruri系は必須）
+  trust_remote_code: true
+
+lancedb:
+  # LanceDBを保存するディレクトリ
+  path: data/lance
+  # このモデル用のテーブル名
+  table_name: chunks_ruri_small

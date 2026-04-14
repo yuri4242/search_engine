@@ -1,0 +1,13 @@
+# Embedding モデル設定: GLuCoSE-base-ja
+# PKSHA Technology製。prefix不要で学習されている
+
+model:
+  name: pkshatech/GLuCoSE-base-ja
+  # prefixなし（GLuCoSEは prefix を付けずに学習されている）
+  query_prefix: ""
+  passage_prefix: ""
+  trust_remote_code: false
+
+lancedb:
+  path: data/lance
+  table_name: chunks_glucose

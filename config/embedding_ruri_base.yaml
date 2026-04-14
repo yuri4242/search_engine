@@ -1,0 +1,12 @@
+# Embedding モデル設定: ruri-base
+# ruri-small と同じく instruction prefix が必須
+
+model:
+  name: cl-nagoya/ruri-base
+  query_prefix: "query: "
+  passage_prefix: "passage: "
+  trust_remote_code: true
+
+lancedb:
+  path: data/lance
+  table_name: chunks_ruri_base
