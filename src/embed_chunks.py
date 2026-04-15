@@ -49,7 +49,8 @@ def embed_chunks(
     texts = [passage_prefix + chunk["text"] for chunk in chunks]
 
     # 2. model.encode(texts, show_progress_bar=True) でまとめてベクトル化する
-    vectors = model.encode(texts, show_progress_bar=True)
+    #    normalize_embeddings=True で単位ベクトル化（内積=コサイン類似度になる）
+    vectors = model.encode(texts, show_progress_bar=True, normalize_embeddings=True)
 
     # 3. 各チャンクに "vector" フィールドを追加して返す
     for chunk, vec in zip(chunks, vectors):
