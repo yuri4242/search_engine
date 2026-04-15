@@ -1,0 +1,6 @@
+# リランクモデル設定: japanese-reranker-cross-encoder-xsmall-v1
+# hotchpotch作、日本語特化、6層・軽量版
+
+reranker:
+  name: hotchpotch/japanese-reranker-cross-encoder-xsmall-v1
+  max_length: 512

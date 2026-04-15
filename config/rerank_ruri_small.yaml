@@ -1,0 +1,7 @@
+# リランクモデル設定: ruri-reranker-small
+# 名古屋大学、日本語特化、LINE DistilBERT ベース、約68M params
+
+reranker:
+  name: cl-nagoya/ruri-reranker-small
+  max_length: 512
+  trust_remote_code: true

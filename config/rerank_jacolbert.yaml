@@ -1,0 +1,7 @@
+# リランクモデル設定: JaColBERTv2.5
+# answerdotai作、日本語ColBERT、bert-base-japanese-v3 ベース、約100M params
+# late-interaction (token単位の query-passage マッチング)
+
+reranker:
+  name: answerdotai/JaColBERTv2.5
+  type: colbert
