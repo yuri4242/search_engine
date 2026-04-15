@@ -10,6 +10,7 @@ def build_chunks(
     input_path: str = "data/raw/articles.jsonl",
     output_path: str = "data/processed/chunks.jsonl",
     chunk_size: int = 400,
+    overlap: int = 0,
 ) -> int:
     """全記事をチャンク分割してJSONLに保存する。
 
@@ -17,6 +18,7 @@ def build_chunks(
         input_path: 入力の記事JSONLファイル
         output_path: 出力のチャンクJSONLファイル
         chunk_size: チャンクの文字数
+        overlap: チャンク同士の重なり文字数
 
     Returns:
         出力したチャンクの総数
@@ -30,7 +32,7 @@ def build_chunks(
          open(output_path, "w", encoding="utf-8") as fout:
         for line in fin:
             article = json.loads(line)
-            chunks = chunk_article(article, chunk_size=chunk_size)
+            chunks = chunk_article(article, chunk_size=chunk_size, overlap=overlap)
             for chunk in chunks:
                 fout.write(json.dumps(chunk, ensure_ascii=False) + "\n")
                 chunk_count += 1

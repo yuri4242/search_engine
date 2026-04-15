@@ -9,4 +9,4 @@ model:
 
 lancedb:
   path: data/lance
-  table_name: chunks_e5_small
+  table_name: chunks_256_ov0_e5_small

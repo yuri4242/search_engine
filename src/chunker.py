@@ -1,4 +1,4 @@
-def chunk_article(article: dict, chunk_size: int = 400) -> list[dict]:
+def chunk_article(article: dict, chunk_size: int = 400, overlap: int = 0) -> list[dict]:
     """
     記事を文字数で等分割してチャンクのリストを返す。
 
@@ -26,7 +26,8 @@ def chunk_article(article: dict, chunk_size: int = 400) -> list[dict]:
     chunks: list[dict] = []
 
     #3. body を chunk_size ずつ区切って chunks に追加していく
-    for chunk_index, i in enumerate(range(0, len(body), chunk_size)):
+    stride = chunk_size - overlap
+    for chunk_index, i in enumerate(range(0, len(body), stride)):
         text = body[i : i + chunk_size]
         chunks.append({
             "article_id": article_id,
