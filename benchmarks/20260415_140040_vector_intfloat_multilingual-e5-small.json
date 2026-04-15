@@ -1,0 +1,329 @@
+{
+  "mode": "vector",
+  "num_queries": 20,
+  "recall_at_k": 0.9,
+  "mrr": 0.7125,
+  "avg_search_time_ms": 59.46379899978638,
+  "per_query": [
+    {
+      "query": "RAG Markdown セマンティックチャンキング",
+      "correct_ids": [
+        "15fb1ef34ccb26d8aa9d"
+      ],
+      "returned_ids": [
+        "15fb1ef34ccb26d8aa9d",
+        "15fb1ef34ccb26d8aa9d",
+        "743e3d2c574e95eac1dd",
+        "743e3d2c574e95eac1dd",
+        "8888c6241793369a0fb7"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "search_time_sec": 0.2124800682067871
+    },
+    {
+      "query": "デモでは動くのにRAGが本番で動かなくなる原因は？",
+      "correct_ids": [
+        "6bf99caf3c44f4bf0053"
+      ],
+      "returned_ids": [
+        "6bf99caf3c44f4bf0053",
+        "6bf99caf3c44f4bf0053",
+        "27ac9a57bfa74e5b0e48",
+        "a519fe3faf24e79062c7",
+        "7a625141b6b66b601ebd"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "search_time_sec": 0.06598663330078125
+    },
+    {
+      "query": "Perplexityの遅延チャンキングとは？",
+      "correct_ids": [
+        "ac9556f44725c3c4fffc"
+      ],
+      "returned_ids": [
+        "ac9556f44725c3c4fffc",
+        "ac9556f44725c3c4fffc",
+        "ac9556f44725c3c4fffc",
+        "ac9556f44725c3c4fffc",
+        "ac9556f44725c3c4fffc"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "search_time_sec": 0.05073666572570801
+    },
+    {
+      "query": "BM25 ベクトル検索 RRF ハイブリッドRAG",
+      "correct_ids": [
+        "8888c6241793369a0fb7"
+      ],
+      "returned_ids": [
+        "8888c6241793369a0fb7",
+        "6fff64c275dc27a4f92b",
+        "8888c6241793369a0fb7",
+        "8888c6241793369a0fb7",
+        "4e4aa1e7825ddd728152"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "search_time_sec": 0.06290125846862793
+    },
+    {
+      "query": "専門用語がRAGでヒットしない問題の解決策",
+      "correct_ids": [
+        "c673970229f00b12e2ed"
+      ],
+      "returned_ids": [
+        "278075c51a40a1db2e76",
+        "fe91e1ddaa7aa0a513c9",
+        "7a625141b6b66b601ebd",
+        "69143e24a8f85d5bca9d",
+        "21b9b1960233b2e124d2"
+      ],
+      "recall_at_k": 0.0,
+      "reciprocal_rank": 0.0,
+      "search_time_sec": 0.05231070518493652
+    },
+    {
+      "query": "RRFのパラメータkの適切な値は？",
+      "correct_ids": [
+        "503cd0333b331750727c"
+      ],
+      "returned_ids": [
+        "503cd0333b331750727c",
+        "503cd0333b331750727c",
+        "503cd0333b331750727c",
+        "c673970229f00b12e2ed",
+        "503cd0333b331750727c"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "search_time_sec": 0.05798983573913574
+    },
+    {
+      "query": "検索結果が足りないときにクエリを書き換えてRAG自身に再検索させるには？",
+      "correct_ids": [
+        "03ac7d46eb166974ed96"
+      ],
+      "returned_ids": [
+        "28843a920882da996c13",
+        "03ac7d46eb166974ed96",
+        "2d16435baf92cfb3300d",
+        "28843a920882da996c13",
+        "28843a920882da996c13"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 0.5,
+      "search_time_sec": 0.05297684669494629
+    },
+    {
+      "query": "RAGとエージェントの違いは？どう使い分けるべき？",
+      "correct_ids": [
+        "28843a920882da996c13"
+      ],
+      "returned_ids": [
+        "28843a920882da996c13",
+        "27ac9a57bfa74e5b0e48",
+        "28843a920882da996c13",
+        "c147b12fb6efd459e6ec",
+        "28843a920882da996c13"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "search_time_sec": 0.05467581748962402
+    },
+    {
+      "query": "Claude Code Agentic Search",
+      "correct_ids": [
+        "6fff64c275dc27a4f92b"
+      ],
+      "returned_ids": [
+        "6fff64c275dc27a4f92b",
+        "6fff64c275dc27a4f92b",
+        "6fff64c275dc27a4f92b",
+        "edcad509ea9b006d03e4",
+        "c147b12fb6efd459e6ec"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "search_time_sec": 0.04266095161437988
+    },
+    {
+      "query": "embeddingモデルとチャンクサイズで検索精度がどう変わるか実測",
+      "correct_ids": [
+        "e2e0c11cc2abc02783b1"
+      ],
+      "returned_ids": [
+        "743e3d2c574e95eac1dd",
+        "e2e0c11cc2abc02783b1",
+        "743e3d2c574e95eac1dd",
+        "1119a7a5b3ed44da72a3",
+        "e2e0c11cc2abc02783b1"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 0.5,
+      "search_time_sec": 0.05768156051635742
+    },
+    {
+      "query": "RAGAS LLM-as-a-judge RAG評価 比較",
+      "correct_ids": [
+        "bdff96c2bdfc271dcf8f"
+      ],
+      "returned_ids": [
+        "3cd98a2b383df312c366",
+        "bdff96c2bdfc271dcf8f",
+        "bdff96c2bdfc271dcf8f",
+        "bdff96c2bdfc271dcf8f",
+        "bdff96c2bdfc271dcf8f"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 0.5,
+      "search_time_sec": 0.05278420448303223
+    },
+    {
+      "query": "ローカルRAG 論文検索",
+      "correct_ids": [
+        "02c7494d5e15822cba43"
+      ],
+      "returned_ids": [
+        "bdc53df058e9d4ab4681",
+        "fe91e1ddaa7aa0a513c9",
+        "48afa62f2798edc9d234",
+        "02c7494d5e15822cba43",
+        "3bab73f632f83bc03783"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 0.25,
+      "search_time_sec": 0.04635214805603027
+    },
+    {
+      "query": "社内文書をクラウドに送らずにAIで質問応答したい",
+      "correct_ids": [
+        "3b13ef972eacf84d0f72"
+      ],
+      "returned_ids": [
+        "3b13ef972eacf84d0f72",
+        "1119a7a5b3ed44da72a3",
+        "1280a06bc0d75ac81cc1",
+        "3b13ef972eacf84d0f72",
+        "7a625141b6b66b601ebd"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "search_time_sec": 0.05497574806213379
+    },
+    {
+      "query": "GPUなしでRAGを構築する方法",
+      "correct_ids": [
+        "4e3dbe6ff94a07d2b1f1"
+      ],
+      "returned_ids": [
+        "4e3dbe6ff94a07d2b1f1",
+        "48afa62f2798edc9d234",
+        "7a625141b6b66b601ebd",
+        "5d2345ecf8c239caaa17",
+        "27ac9a57bfa74e5b0e48"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "search_time_sec": 0.039656639099121094
+    },
+    {
+      "query": "質疑応答モデルとEmbeddingモデルは何が違うのか",
+      "correct_ids": [
+        "69143e24a8f85d5bca9d"
+      ],
+      "returned_ids": [
+        "69143e24a8f85d5bca9d",
+        "69143e24a8f85d5bca9d",
+        "69143e24a8f85d5bca9d",
+        "69143e24a8f85d5bca9d",
+        "69143e24a8f85d5bca9d"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "search_time_sec": 0.05730700492858887
+    },
+    {
+      "query": "ベクトルDB 比較 選定 RAG",
+      "correct_ids": [
+        "4e4aa1e7825ddd728152"
+      ],
+      "returned_ids": [
+        "4e4aa1e7825ddd728152",
+        "7ea4d6d2fd0c5fb61b92",
+        "885f906cb110ef371862",
+        "8888c6241793369a0fb7",
+        "c147b12fb6efd459e6ec"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "search_time_sec": 0.04742264747619629
+    },
+    {
+      "query": "RAGにナレッジグラフを組み合わせると何ができるようになる？",
+      "correct_ids": [
+        "9eedb6b88eb84042e699"
+      ],
+      "returned_ids": [
+        "1280a06bc0d75ac81cc1",
+        "9eedb6b88eb84042e699",
+        "97fe5c2647f8844fab9e",
+        "97fe5c2647f8844fab9e",
+        "9eedb6b88eb84042e699"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 0.5,
+      "search_time_sec": 0.04215574264526367
+    },
+    {
+      "query": "GraphRAG 個人ナレッジ 構築",
+      "correct_ids": [
+        "db2ab49976244b8f0c37"
+      ],
+      "returned_ids": [
+        "9eedb6b88eb84042e699",
+        "db2ab49976244b8f0c37",
+        "17d914b15165b1567fb9",
+        "1280a06bc0d75ac81cc1",
+        "97fe5c2647f8844fab9e"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 0.5,
+      "search_time_sec": 0.04622912406921387
+    },
+    {
+      "query": "RAGの基本パイプラインと限界",
+      "correct_ids": [
+        "bdc53df058e9d4ab4681"
+      ],
+      "returned_ids": [
+        "ff04a5d5d62b2204abe7",
+        "5baf7618fa88d9226dc0",
+        "fe91e1ddaa7aa0a513c9",
+        "fe91e1ddaa7aa0a513c9",
+        "fe91e1ddaa7aa0a513c9"
+      ],
+      "recall_at_k": 0.0,
+      "reciprocal_rank": 0.0,
+      "search_time_sec": 0.04697895050048828
+    },
+    {
+      "query": "RAGとは何か 初心者向け わかりやすく",
+      "correct_ids": [
+        "7a625141b6b66b601ebd"
+      ],
+      "returned_ids": [
+        "27ac9a57bfa74e5b0e48",
+        "7a625141b6b66b601ebd",
+        "75c1ba92a0fe53bae396",
+        "5d2345ecf8c239caaa17",
+        "21b9b1960233b2e124d2"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 0.5,
+      "search_time_sec": 0.045013427734375
+    }
+  ]
+}

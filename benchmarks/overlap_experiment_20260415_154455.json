@@ -1,0 +1,53 @@
+{
+  "chunk_size": 256,
+  "overlaps": [
+    0,
+    64,
+    128
+  ],
+  "model": "config/embedding_e5_small.yaml",
+  "top_k": 5,
+  "retrieve_k": 20,
+  "rrf_k": 60,
+  "results": [
+    {
+      "chunk_size": 256,
+      "overlap": 0,
+      "stride": 256,
+      "num_chunks": 3846,
+      "model": "intfloat/multilingual-e5-small",
+      "table_name": "chunks_256_ov0_e5_small",
+      "vectorize_time_sec": 189.30238389968872,
+      "recall_at_k": 0.95,
+      "mrr": 0.7916666666666667,
+      "avg_search_time_ms": 64.95300531387329,
+      "num_queries": 20
+    },
+    {
+      "chunk_size": 256,
+      "overlap": 64,
+      "stride": 192,
+      "num_chunks": 5106,
+      "model": "intfloat/multilingual-e5-small",
+      "table_name": "chunks_256_ov64_e5_small",
+      "vectorize_time_sec": 229.0351378917694,
+      "recall_at_k": 0.95,
+      "mrr": 0.7208333333333333,
+      "avg_search_time_ms": 64.69289064407349,
+      "num_queries": 20
+    },
+    {
+      "chunk_size": 256,
+      "overlap": 128,
+      "stride": 128,
+      "num_chunks": 7635,
+      "model": "intfloat/multilingual-e5-small",
+      "table_name": "chunks_256_ov128_e5_small",
+      "vectorize_time_sec": 355.0006465911865,
+      "recall_at_k": 0.9,
+      "mrr": 0.7166666666666667,
+      "avg_search_time_ms": 85.5841875076294,
+      "num_queries": 20
+    }
+  ]
+}

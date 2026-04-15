@@ -1,0 +1,97 @@
+{
+  "chunk_sizes": [
+    128,
+    256,
+    384,
+    512
+  ],
+  "models": [
+    "config/embedding_ruri_base.yaml",
+    "config/embedding_e5_small.yaml"
+  ],
+  "top_k": 5,
+  "retrieve_k": 20,
+  "rrf_k": 60,
+  "results": [
+    {
+      "chunk_size": 128,
+      "model": "cl-nagoya/ruri-base",
+      "table_name": "chunks_128_ruri_base",
+      "vectorize_time_sec": 726.9857110977173,
+      "recall_at_k": 0.95,
+      "mrr": 0.7283333333333333,
+      "avg_search_time_ms": 216.6753053665161,
+      "num_queries": 20
+    },
+    {
+      "chunk_size": 128,
+      "model": "intfloat/multilingual-e5-small",
+      "table_name": "chunks_128_e5_small",
+      "vectorize_time_sec": 220.34213209152222,
+      "recall_at_k": 0.85,
+      "mrr": 0.675,
+      "avg_search_time_ms": 88.52252960205078,
+      "num_queries": 20
+    },
+    {
+      "chunk_size": 256,
+      "model": "cl-nagoya/ruri-base",
+      "table_name": "chunks_256_ruri_base",
+      "vectorize_time_sec": 691.1013026237488,
+      "recall_at_k": 0.9,
+      "mrr": 0.7583333333333333,
+      "avg_search_time_ms": 172.01837301254272,
+      "num_queries": 20
+    },
+    {
+      "chunk_size": 256,
+      "model": "intfloat/multilingual-e5-small",
+      "table_name": "chunks_256_e5_small",
+      "vectorize_time_sec": 204.85941410064697,
+      "recall_at_k": 0.95,
+      "mrr": 0.7916666666666667,
+      "avg_search_time_ms": 91.32522344589233,
+      "num_queries": 20
+    },
+    {
+      "chunk_size": 384,
+      "model": "cl-nagoya/ruri-base",
+      "table_name": "chunks_384_ruri_base",
+      "vectorize_time_sec": 693.541348695755,
+      "recall_at_k": 0.85,
+      "mrr": 0.7375,
+      "avg_search_time_ms": 203.7584900856018,
+      "num_queries": 20
+    },
+    {
+      "chunk_size": 384,
+      "model": "intfloat/multilingual-e5-small",
+      "table_name": "chunks_384_e5_small",
+      "vectorize_time_sec": 216.36201667785645,
+      "recall_at_k": 0.9,
+      "mrr": 0.7333333333333333,
+      "avg_search_time_ms": 84.79830026626587,
+      "num_queries": 20
+    },
+    {
+      "chunk_size": 512,
+      "model": "cl-nagoya/ruri-base",
+      "table_name": "chunks_512_ruri_base",
+      "vectorize_time_sec": 724.8981256484985,
+      "recall_at_k": 0.85,
+      "mrr": 0.7625,
+      "avg_search_time_ms": 182.1183443069458,
+      "num_queries": 20
+    },
+    {
+      "chunk_size": 512,
+      "model": "intfloat/multilingual-e5-small",
+      "table_name": "chunks_512_e5_small",
+      "vectorize_time_sec": 202.7877233028412,
+      "recall_at_k": 0.9,
+      "mrr": 0.7875,
+      "avg_search_time_ms": 63.38711977005004,
+      "num_queries": 20
+    }
+  ]
+}

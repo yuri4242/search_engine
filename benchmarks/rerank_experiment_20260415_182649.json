@@ -1,0 +1,104 @@
+{
+  "embed_config": "config/embedding_e5_small.yaml",
+  "chunks_path": "data/processed/chunks_256_ov0.jsonl",
+  "table_name": "chunks_256_ov0_e5_small",
+  "retrieve_k": 20,
+  "rrf_k": 60,
+  "final_top_k": 10,
+  "patterns": [
+    {
+      "id": "P0",
+      "label": "baseline (hybrid only)",
+      "rerank_config": null,
+      "M": null
+    },
+    {
+      "id": "P1",
+      "label": "xsmall M=10",
+      "rerank_config": "config/rerank_xsmall.yaml",
+      "M": 10
+    },
+    {
+      "id": "P2",
+      "label": "xsmall M=20",
+      "rerank_config": "config/rerank_xsmall.yaml",
+      "M": 20
+    },
+    {
+      "id": "P3",
+      "label": "small  M=10",
+      "rerank_config": "config/rerank_small.yaml",
+      "M": 10
+    }
+  ],
+  "results": [
+    {
+      "pattern_id": "P0",
+      "label": "baseline (hybrid only)",
+      "rerank_config": null,
+      "M": null,
+      "num_queries": 20,
+      "mrr": 0.7916666666666667,
+      "avg_search_time_ms": 89.62289094924927,
+      "recall_at_1": 0.65,
+      "precision_at_1": 0.65,
+      "recall_at_3": 0.95,
+      "precision_at_3": 0.6,
+      "recall_at_5": 0.95,
+      "precision_at_5": 0.5,
+      "recall_at_10": 0.95,
+      "precision_at_10": 0.40499999999999997
+    },
+    {
+      "pattern_id": "P1",
+      "label": "xsmall M=10",
+      "rerank_config": "config/rerank_xsmall.yaml",
+      "M": 10,
+      "num_queries": 20,
+      "mrr": 0.78,
+      "avg_search_time_ms": 286.10100746154785,
+      "recall_at_1": 0.7,
+      "precision_at_1": 0.7,
+      "recall_at_3": 0.8,
+      "precision_at_3": 0.4833333333333333,
+      "recall_at_5": 0.9,
+      "precision_at_5": 0.48,
+      "recall_at_10": 0.95,
+      "precision_at_10": 0.40499999999999997
+    },
+    {
+      "pattern_id": "P2",
+      "label": "xsmall M=20",
+      "rerank_config": "config/rerank_xsmall.yaml",
+      "M": 20,
+      "num_queries": 20,
+      "mrr": 0.7388888888888889,
+      "avg_search_time_ms": 518.2999491691589,
+      "recall_at_1": 0.65,
+      "precision_at_1": 0.65,
+      "recall_at_3": 0.8,
+      "precision_at_3": 0.45,
+      "recall_at_5": 0.8,
+      "precision_at_5": 0.45999999999999996,
+      "recall_at_10": 0.9,
+      "precision_at_10": 0.355
+    },
+    {
+      "pattern_id": "P3",
+      "label": "small  M=10",
+      "rerank_config": "config/rerank_small.yaml",
+      "M": 10,
+      "num_queries": 20,
+      "mrr": 0.7571428571428571,
+      "avg_search_time_ms": 507.0849895477295,
+      "recall_at_1": 0.65,
+      "precision_at_1": 0.65,
+      "recall_at_3": 0.8,
+      "precision_at_3": 0.5,
+      "recall_at_5": 0.9,
+      "precision_at_5": 0.45999999999999996,
+      "recall_at_10": 0.95,
+      "precision_at_10": 0.40499999999999997
+    }
+  ]
+}
