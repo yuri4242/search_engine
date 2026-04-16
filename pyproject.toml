@@ -13,6 +13,8 @@ dependencies = [
     "sentencepiece",
     "fugashi",
     "unidic-lite",
+    "llama-cpp-python>=0.3.20",
+    "psutil>=7.2.2",
 ]
 
 [project.optional-dependencies]
