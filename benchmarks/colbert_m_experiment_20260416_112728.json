@@ -1,0 +1,75 @@
+{
+  "embed_config": "config/embedding_e5_small.yaml",
+  "chunks_path": "data/processed/chunks_256_ov0.jsonl",
+  "table_name": "chunks_256_ov0_e5_small",
+  "retrieve_k": 20,
+  "rrf_k": 60,
+  "final_top_k": 10,
+  "patterns": [
+    {
+      "id": "P0",
+      "label": "baseline (hybrid only)",
+      "M": null
+    },
+    {
+      "id": "P5",
+      "label": "ColBERT M=10",
+      "M": 10
+    },
+    {
+      "id": "P6",
+      "label": "ColBERT M=20",
+      "M": 20
+    }
+  ],
+  "results": [
+    {
+      "pattern_id": "P0",
+      "label": "baseline (hybrid only)",
+      "M": null,
+      "num_queries": 20,
+      "mrr": 0.7916666666666667,
+      "avg_search_time_ms": 66.59280061721802,
+      "recall_at_1": 0.65,
+      "precision_at_1": 0.65,
+      "recall_at_3": 0.95,
+      "precision_at_3": 0.6,
+      "recall_at_5": 0.95,
+      "precision_at_5": 0.5,
+      "recall_at_10": 0.95,
+      "precision_at_10": 0.40499999999999997
+    },
+    {
+      "pattern_id": "P5",
+      "label": "ColBERT M=10",
+      "M": 10,
+      "num_queries": 20,
+      "mrr": 0.875,
+      "avg_search_time_ms": 1613.0661129951477,
+      "recall_at_1": 0.85,
+      "precision_at_1": 0.85,
+      "recall_at_3": 0.9,
+      "precision_at_3": 0.5666666666666667,
+      "recall_at_5": 0.9,
+      "precision_at_5": 0.5,
+      "recall_at_10": 0.95,
+      "precision_at_10": 0.40499999999999997
+    },
+    {
+      "pattern_id": "P6",
+      "label": "ColBERT M=20",
+      "M": 20,
+      "num_queries": 20,
+      "mrr": 0.7995833333333333,
+      "avg_search_time_ms": 3457.1977376937866,
+      "recall_at_1": 0.75,
+      "precision_at_1": 0.75,
+      "recall_at_3": 0.85,
+      "precision_at_3": 0.5166666666666666,
+      "recall_at_5": 0.9,
+      "precision_at_5": 0.45999999999999996,
+      "recall_at_10": 0.95,
+      "precision_at_10": 0.39
+    }
+  ]
+}
