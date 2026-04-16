@@ -1,0 +1,98 @@
+{
+  "hyde_answers": "data/processed/hyde_answers_qwen3b.jsonl",
+  "embed_config": "config/embedding_e5_small.yaml",
+  "chunks_path": "data/processed/chunks_256_ov0.jsonl",
+  "table_name": "chunks_256_ov0_e5_small",
+  "retrieve_k": 20,
+  "rrf_k": 60,
+  "colbert_m": 10,
+  "final_top_k": 10,
+  "patterns": [
+    {
+      "id": "P0",
+      "label": "baseline (hybrid+ColBERT)",
+      "mode": "baseline"
+    },
+    {
+      "id": "P1",
+      "label": "HyDE vector only",
+      "mode": "hyde_vector_only"
+    },
+    {
+      "id": "P2",
+      "label": "HyDE + BM25 hybrid",
+      "mode": "hyde_hybrid"
+    },
+    {
+      "id": "P3",
+      "label": "HyDE + BM25 hybrid + ColBERT",
+      "mode": "hyde_hybrid_colbert"
+    }
+  ],
+  "results": [
+    {
+      "pattern_id": "P0",
+      "label": "baseline (hybrid+ColBERT)",
+      "mode": "baseline",
+      "num_queries": 20,
+      "mrr": 0.875,
+      "avg_search_time_ms": 2658.17266702652,
+      "recall_at_1": 0.85,
+      "precision_at_1": 0.85,
+      "recall_at_3": 0.9,
+      "precision_at_3": 0.5666666666666667,
+      "recall_at_5": 0.9,
+      "precision_at_5": 0.5,
+      "recall_at_10": 0.95,
+      "precision_at_10": 0.40499999999999997
+    },
+    {
+      "pattern_id": "P1",
+      "label": "HyDE vector only",
+      "mode": "hyde_vector_only",
+      "num_queries": 20,
+      "mrr": 0.43047619047619046,
+      "avg_search_time_ms": 93.08587312698364,
+      "recall_at_1": 0.3,
+      "precision_at_1": 0.3,
+      "recall_at_3": 0.5,
+      "precision_at_3": 0.31666666666666665,
+      "recall_at_5": 0.55,
+      "precision_at_5": 0.28,
+      "recall_at_10": 0.7,
+      "precision_at_10": 0.27
+    },
+    {
+      "pattern_id": "P2",
+      "label": "HyDE + BM25 hybrid",
+      "mode": "hyde_hybrid",
+      "num_queries": 20,
+      "mrr": 0.6458333333333333,
+      "avg_search_time_ms": 101.0788083076477,
+      "recall_at_1": 0.5,
+      "precision_at_1": 0.5,
+      "recall_at_3": 0.75,
+      "precision_at_3": 0.4666666666666666,
+      "recall_at_5": 0.9,
+      "precision_at_5": 0.43,
+      "recall_at_10": 0.9,
+      "precision_at_10": 0.33999999999999997
+    },
+    {
+      "pattern_id": "P3",
+      "label": "HyDE + BM25 hybrid + ColBERT",
+      "mode": "hyde_hybrid_colbert",
+      "num_queries": 20,
+      "mrr": 0.775,
+      "avg_search_time_ms": 2360.7954382896423,
+      "recall_at_1": 0.7,
+      "precision_at_1": 0.7,
+      "recall_at_3": 0.85,
+      "precision_at_3": 0.5,
+      "recall_at_5": 0.85,
+      "precision_at_5": 0.44000000000000006,
+      "recall_at_10": 0.9,
+      "precision_at_10": 0.33999999999999997
+    }
+  ]
+}
