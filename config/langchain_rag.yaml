@@ -1,0 +1,45 @@
+# Embedding モデル設定: multilingual-e5-small
+# Microsoft製の多言語モデル。ruriと同じくprefixが必須
+
+embedding:
+  model: intfloat/multilingual-e5-small
+  query_prefix: "query: "
+  passage_prefix: "passage: "
+  trust_remote_code: false
+  normalize: true
+
+vectorstore:
+  type: lancedb
+  path: data/lance
+  table_name: chunks_256_ov0_e5_small_lc
+  retriever_k: 20
+
+bm25:
+  chunks_path: data/processed/chunks_256_ov0.jsonl
+  tokenizer: sudachipy
+  split_mode: C
+  use_normalized_form: true
+  retriever_k: 20
+
+rrf:
+  c: 60
+
+reranker:
+  model: answerdotai/JaColBERTv2.5
+  type: colbert
+  candidate_pool: 10
+  top_n: 3
+
+llm:
+  type: llama_cpp
+  model_path: models/qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf
+  n_ctx: 1024
+  n_threads: 8
+  temperature: 0.3
+  max_tokens: 150
+  stop: ["\n\n", "質問:", "質問:"]
+
+prompt:
+  system: |
+    以下の情報をもとに質問に回答してください。情報に含まれない内容には「情報が見つかりませんでした」と答えて下さい。
+
