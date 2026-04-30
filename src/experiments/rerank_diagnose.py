@@ -9,11 +9,11 @@ from sentence_transformers import CrossEncoder, SentenceTransformer
 from sudachipy import Dictionary
 from rank_bm25 import BM25Okapi
 
-from bm25_search import load_chunks, search_bm25, tokenize
-from evaluate import load_config, load_test_queries, calculate_recall_at_k
-from hybrid_search import rrf_fusion
-from rerank import rerank
-from search import search as vector_search
+from src.search.bm25_search import load_chunks, search_bm25, tokenize
+from src.eval.evaluate import load_config, load_test_queries, calculate_recall_at_k
+from src.search.hybrid_search import rrf_fusion
+from src.rerank.rerank import rerank
+from src.search.search import search as vector_search
 
 EMBED_CONFIG = "config/embedding_e5_small.yaml"
 RERANK_MODEL = "hotchpotch/japanese-reranker-cross-encoder-xsmall-v1"

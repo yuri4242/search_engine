@@ -18,9 +18,9 @@ from rank_bm25 import BM25Okapi
 from sentence_transformers import SentenceTransformer
 from sudachipy import Dictionary
 
-from search import search as vector_search
-from bm25_search import tokenize, search_bm25, load_chunks
-from hybrid_search import rrf_fusion
+from src.search.search import search as vector_search
+from src.search.bm25_search import tokenize, search_bm25, load_chunks
+from src.search.hybrid_search import rrf_fusion
 
 
 def load_config(config_path: str) -> dict:

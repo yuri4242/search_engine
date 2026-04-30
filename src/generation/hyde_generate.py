@@ -16,7 +16,7 @@ from pathlib import Path
 import yaml
 from llama_cpp import Llama
 
-from evaluate import load_test_queries
+from src.eval.evaluate import load_test_queries
 
 
 def load_hyde_config(config_path: str) -> dict:

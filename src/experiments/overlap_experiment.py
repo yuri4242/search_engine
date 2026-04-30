@@ -16,12 +16,12 @@ from rank_bm25 import BM25Okapi
 from sentence_transformers import SentenceTransformer
 from sudachipy import Dictionary
 
-from build_chunks import build_chunks
-from embed_chunks import embed_chunks, save_to_lancedb, load_chunks, load_config
-from bm25_search import tokenize, search_bm25
-from search import search as vector_search
-from hybrid_search import rrf_fusion
-from evaluate import (
+from src.chunk.build_chunks import build_chunks
+from src.embed.embed_chunks import embed_chunks, save_to_lancedb, load_chunks, load_config
+from src.search.bm25_search import tokenize, search_bm25
+from src.search.search import search as vector_search
+from src.search.hybrid_search import rrf_fusion
+from src.eval.evaluate import (
     calculate_recall_at_k,
     calculate_reciprocal_rank,
     load_test_queries,

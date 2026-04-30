@@ -16,12 +16,12 @@ from sudachipy import Dictionary
 
 from ragatouille import RAGPretrainedModel
 
-from bm25_search import load_chunks, search_bm25, tokenize
-from evaluate import load_config, load_test_queries
-from hybrid_search import rrf_fusion
-from rerank import rerank
-from rerank_experiment import colbert_rerank
-from search import search as vector_search
+from src.search.bm25_search import load_chunks, search_bm25, tokenize
+from src.eval.evaluate import load_config, load_test_queries
+from src.search.hybrid_search import rrf_fusion
+from src.rerank.rerank import rerank
+from src.experiments.rerank_experiment import colbert_rerank
+from src.search.search import search as vector_search
 
 EMBED_CONFIG = "config/embedding_e5_small.yaml"
 CHUNKS_PATH = "data/processed/chunks_256_ov0.jsonl"

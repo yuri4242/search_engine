@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 
-from chunker import chunk_article
+from src.chunk.chunker import chunk_article
 
 
 def build_chunks(
