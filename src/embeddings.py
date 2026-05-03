@@ -11,4 +11,5 @@ class E5Embeddings(HuggingFaceEmbeddings):
         return super().embed_documents(prefixed)
 
     def embed_query(self, text: str) -> list[float]:
-        return super().embed_query(self.query_prefix + text)
+        return self._client.encode(self.query_prefix + text, **self.encode_kwargs,).tolist()
+        # return super().embed_query(self.query_prefix + text)
