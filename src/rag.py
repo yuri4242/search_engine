@@ -8,8 +8,10 @@ from langchain_community.vectorstores import LanceDB
 from langchain_community.retrievers import BM25Retriever
 from langchain_core.documents import Document
 from langchain.retrievers import EnsembleRetriever
+from langchain.retrievers import ContextualCompressionRetriever
 
 from src.embeddings import E5Embeddings
+from src.rerank import ColBERTCompressor
 
 def build_ensemble_retriever(config):
     """Vector とKeyword のhybrid検索"""
@@ -51,11 +53,21 @@ def build_ensemble_retriever(config):
         preprocess_func=sudachi_preprocess,
     )
     bm25_retriever.k = config["bm25"]["retriever_k"]
+
     ensemble_retriever = EnsembleRetriever(
         retrievers=[vector_retriever, bm25_retriever],
         weights=[0.5, 0.5],
     )
-    return ensemble_retriever
+
+    compressor = ColBERTCompressor(
+        model_name=config["reranker"]["model"],
+        candidate_pool=config["reranker"]["candidate_pool"],
+        top_n=config["reranker"]["top_n"],
+    )
+    return ContextualCompressionRetriever(
+        base_retriever=ensemble_retriever,
+        base_compressor=compressor,
+    )
 
 
 if __name__ == "__main__":
