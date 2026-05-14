@@ -1,17 +1,23 @@
 import yaml
 import json
 import lancedb
+import argparse
+import time
 
 from sudachipy import Dictionary, SplitMode
 
 from langchain_community.vectorstores import LanceDB
 from langchain_community.retrievers import BM25Retriever
 from langchain_core.documents import Document
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import PromptTemplate
+from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 from langchain.retrievers import EnsembleRetriever
 from langchain.retrievers import ContextualCompressionRetriever
 
 from src.embeddings import E5Embeddings
 from src.rerank import ColBERTCompressor
+from src.llm import build_llm
 
 def build_ensemble_retriever(config):
     """Vector とKeyword のhybrid検索"""
@@ -69,10 +75,53 @@ def build_ensemble_retriever(config):
         base_compressor=compressor,
     )
 
+def format_docs(docs):
+    return "\n\n".join(f"[{i+1}] {d.page_content}" for i, d in enumerate(docs))
+
+def build_rag_chain(config):
+    retriever = build_ensemble_retriever(config)
+    llm = build_llm(config)
+    template = (
+            f"{config['prompt']['system'].strip()}\n\n"
+            "{context}\n\n"
+            "質問: {question}\n"
+            "回答: "
+            )
+    prompt = PromptTemplate.from_template(template)
+
+    answer_chain = (
+        RunnablePassthrough.assign(context=lambda x: format_docs(x["context"]))
+        | prompt
+        | llm
+        | StrOutputParser()
+    )
+
+    return (
+        RunnableParallel({"context": retriever, "question": RunnablePassthrough()}).assign(answer=answer_chain)
+        )
+
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="RAG質疑応答")
+    parser.add_argument("--query", default="RAGのチャンク分割", help="質問")
+    args = parser.parse_args()
+
     config = yaml.safe_load(open("config/langchain_rag.yaml"))
-    retriever = build_ensemble_retriever(config)
-    results = retriever.invoke("RAGのチャンク分割")
-    for d in results[:5]:
-        print(d.metadata["article_id"], d.metadata["article_title"][:50])
+    
+    print("初期化中...")
+    init_start = time.time()
+    chain = build_rag_chain(config)
+    print(f"初期化完了 ({time.time() - init_start:.1f}秒) \n")
+
+    print(f"[質問] {args.query}")
+    print("-" * 70)
+
+    invoke_start = time.time()
+    result = chain.invoke(args.query)
+    print(f"\n[回答] ({time.time() - invoke_start:.1f}秒) \n")
+    print(result["answer"].strip())
+
+    print("\n根拠:")
+    for i, d in enumerate(result["context"], 1):
+        print(f"  [{i}] {d.metadata['article_title'][:70]}")
+        print(f"      {d.metadata['article_url']}")
