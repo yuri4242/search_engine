@@ -36,8 +36,8 @@ llm:
   n_ctx: 1024
   n_threads: 8
   temperature: 0.3
-  max_tokens: 150
-  stop: ["\n\n", "質問:", "質問:"]
+  max_tokens: 250
+  stop: ["\n質問", "質問:", "質問:"]
 
 prompt:
   system: |
